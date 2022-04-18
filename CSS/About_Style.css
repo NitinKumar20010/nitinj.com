@@ -1,0 +1,228 @@
+:root{
+    --black: #4600f7;
+    --dkblue: #0d314b;
+    --plum: #11d411;
+    --hotmag: #17ff32;
+    --magenta: #e310cb;
+    --aqua: #1f1ff1;
+    --white: #ffffff;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: 'Oxygen', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+}
+body{
+    background-color: var(--black);
+    font-family: var(--sans);
+    font-size: var(--font-size);
+    color: var(--white);
+}
+#navbar{
+    margin: 20px 0;
+    
+}
+#navbar ul{
+    display: flex;
+    color: var(--white);
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    
+}
+li{
+    list-style-type: none;
+}
+nav a{
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    font-size: var(--font-size);
+}
+a:hover{
+    color: var(--magenta);
+
+}
+nav li:first-child{
+    font-family: var(--mono);
+    flex-basis: 100%;
+    text-align: center;
+}
+.button{
+    background-color: var(--magenta);
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+    text-decoration: none;
+    font-family: var(--mono);
+    color: var(--white);
+}
+.button:hover{
+    color: var(--white);
+    text-decoration: none;
+    background-color: var(--hotmag);
+}
+li [class*="fa-"]{
+    color: var(--aqua);
+}
+li [class*="fa-"]:hover{
+    color: var(--hotmag);
+}
+li [class*="fa-face"]:hover{
+    color: yellow;
+}
+#intro{
+    color: var(--white);
+    margin:0 auto;
+    line-height: 2;
+    font-family: var(--sans);
+    padding: 4rem 0 5rem 10px;
+    max-width: 1200px;
+
+}
+#intro span{
+    display: block;
+    font-size: 40px;
+    font-family: var(--mono);
+    color: var(--aqua);
+}
+#intro a{
+    display: inline;
+    color: var(--magenta);
+    text-decoration: none;
+}
+#intro a:hover{
+    text-decoration: underline;
+}
+#intro h1{
+    font-size: 30px;
+}
+.gradient{
+    background: rgb(157, 0, 255);
+    background: linear-gradient(129deg, rgba(255,23,228,1) 38%, rgba(134,251,251,1) 51%);
+    height: 2px;
+}
+.contact{
+    background-color: var(--plum);
+    
+}
+#contact{
+    width:350px;
+    text-align: center;
+    padding: 3.5rem 0;
+    margin: 0 auto;
+}
+#contact p{
+    margin: 1em 0 2em 0;
+}
+footer{
+    padding: 4rem 0 4rem 0;
+    text-align: center;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.top{
+    text-align: right;
+    padding-right: 30px;
+}
+.top a{
+    color: var(--white);
+    padding: 4px;
+}
+.top a:hover{
+    background-color: var(--magenta);
+}
+.project{
+    background-color: var(--dkblue);
+}
+#project{
+    padding: 1.5rem;
+    line-height: 1.5;
+}
+#project h2{
+    font-size: 40px;
+    padding: 2rem 0;
+}
+#project h3{
+    color: var(--aqua);
+}
+#project ul{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap:0.5rem;
+}
+#project img{
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    border-left: 1px solid var(--aqua);
+    border-top: 1px solid var(--aqua);
+    border-radius: 25px;
+    width: 100%;
+}
+#project a{
+    color: var(--magenta);
+    text-decoration: none;
+}
+#project a:hover{
+    text-decoration: underline;
+}
+
+.blackbox{
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--black);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 3rem 0;
+}
+
+/* Here i start media query */
+@media (min-width: 800px) {
+    article {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+    }
+    #project img {
+      grid-column: 7/12;
+      grid-row: 7/1;
+    }
+    .text {
+      grid-column: 1/8;
+      grid-row: 2/1;
+      order: 2;
+      text-align: left;
+    }
+    #project ul {
+      justify-content: flex-start;
+    }
+    
+}
+@media(min-width:850px){
+    nav{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child{
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+    
+}
+@media(min-width:850px){
+    #project{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
